@@ -4,7 +4,7 @@ public class Triangle{
   public Triangle(Point a, Point b, Point c){
     v1 = a;
     v2 = b;
-    v2 = c;
+    v3 = c;
   }
 
   public Triangle(double x1, double y1,double x2, double y2,double x3, double y3){
@@ -38,17 +38,17 @@ public class Triangle{
     double side2 = Math.round(v2.distanceTo(v3)*10000)/10000.0;
     double side3 = Math.round(v3.distanceTo(v1)*10000)/10000.0;
     if ((side1 == side2) && (side1 == side3))
-      return "Equilateral";
+      return "equilateral";
     else if (((side1 == side2) && (side1 != side3)) || ((side1 == side3) && (side1 != side2)) || ((side2 == side3) && (side2 != side1)))
-        return "Isoscele";
+        return "isosceles";
     else
-      return "Scalene";
+      return "scalene";
   }
 
   public String toString(){
-    return "v1" + "(" + v1.getX() + "," + v1.getY() + ") " +
-    "v2" + "(" + v2.getX() + "," + v2.getY() + ") " +
-    "v1" + "(" + v3.getX() + "," + v3.getY() + ")";
+    return "v1" + "(" + v1.getX() + ", " + v1.getY() + ") " +
+    "v2" + "(" + v2.getX() + ", " + v2.getY() + ") " +
+    "v3" + "(" + v3.getX() + ", " + v3.getY() + ")";
   }
 
   public void setVertex(int index, Point newP){
