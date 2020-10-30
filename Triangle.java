@@ -33,12 +33,25 @@ public class Triangle{
     return area;
   }
 
+  public String classify(){
+    double side1 = Math.round(v1.distanceTo(v2)*10000)/10000.0;
+    double side2 = Math.round(v2.distanceTo(v3)*10000)/10000.0;
+    double side3 = Math.round(v3.distanceTo(v1)*10000)/10000.0;
+    if ((side1 == side2) && (side1 == side3))
+      return "Equilateral";
+    else if (((side1 == side2) && (side1 != side3)) || ((side1 == side3) && (side1 != side2)) || ((side2 == side3) && (side2 != side1)))
+        return "Isoscele";
+    else
+      return "Scalene";
+  }
+
   //Quick test
   /*
   public static void main(String[]args){
-    Triangle T1 = new Triangle(0,1,1.5,5.5,-4,-2);
+    Triangle T1 = new Triangle(0,1,0,2,1,1);
     System.out.println(T1.getPerimeter());
     System.out.println(T1.getArea());
+    System.out.println(T1.classify());
   }
   */
 
