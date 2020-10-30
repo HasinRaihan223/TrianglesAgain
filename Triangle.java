@@ -24,10 +24,21 @@ public class Triangle{
     return P;
   }
 
+  public double getArea(){
+    double side1 = v1.distanceTo(v2);
+    double side2 = v2.distanceTo(v3);
+    double side3 = v3.distanceTo(v1);
+    double s = (getPerimeter())/2.0;
+    double area = Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
+    return area;
+  }
+
   //Quick test
-  /* public static void main(String[]args){
-    Triangle T1 = new Triangle(0,1,1,3,-2,5);
+  /*
+  public static void main(String[]args){
+    Triangle T1 = new Triangle(0,1,1.5,5.5,-4,-2);
     System.out.println(T1.getPerimeter());
+    System.out.println(T1.getArea());
   }
   */
 
