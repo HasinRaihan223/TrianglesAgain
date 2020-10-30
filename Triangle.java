@@ -45,14 +45,21 @@ public class Triangle{
       return "Scalene";
   }
 
-  //Quick test
+  public String toString(){
+    return "v1" + "(" + v1.getX() + "," + v1.getY() + ") " +
+    "v2" + "(" + v2.getX() + "," + v2.getY() + ") " +
+    "v1" + "(" + v3.getX() + "," + v3.getY() + ")";
+  }
+
   /*
+  //Quick Tester
   public static void main(String[]args){
     Triangle T1 = new Triangle(0,1,0,2,1,1);
     System.out.println(T1.getPerimeter());
     System.out.println(T1.getArea());
     System.out.println(T1.classify());
+    System.out.println(T1.toString());
   }
   */
-
+  
 }
