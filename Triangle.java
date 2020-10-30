@@ -51,6 +51,18 @@ public class Triangle{
     "v1" + "(" + v3.getX() + "," + v3.getY() + ")";
   }
 
+  public void setVertex(int index, Point newP){
+    if (index == 0){
+      v1 = newP;
+    }
+    if (index == 1){
+      v2 = newP;
+    }
+    if (index == 2){
+      v3 = newP;
+    }
+  }
+
   /*
   //Quick Tester
   public static void main(String[]args){
@@ -59,7 +71,10 @@ public class Triangle{
     System.out.println(T1.getArea());
     System.out.println(T1.classify());
     System.out.println(T1.toString());
+    Point k = new Point(15, 15);
+    T1.setVertex(0,k);
+    System.out.println(k.getX() + "," + k.getY());
   }
   */
-  
+
 }
